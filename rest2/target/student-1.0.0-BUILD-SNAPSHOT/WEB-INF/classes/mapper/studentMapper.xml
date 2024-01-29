@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Student">
+    <select id="listAll" resultType="student">
+        select num, name from student
+    </select>
+
+    <insert id="save" parameterType="student">
+        insert into student(num, name, korean, english, math)
+        values (#{num}, #{name}, #{korean}, #{english}, #{math})
+    </insert>
+
+    <select id="findByNum" parameterType="String" resultType="student">
+        select * from student where num = #{num}
+    </select>
+
+    <delete id="delete" parameterType="String">
+        delete from student where num = #{num}
+    </delete>
+
+</mapper>
