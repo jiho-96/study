@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2 id = "hello">안녕하세요</h2>
+  <h2 id = "hi">반갑습니다</h2>
+  
+  <script>
+
+    // selector
+    document.getElementById('hello').innerHTML = '안녕'; // HTML 변경하는 문법
+    // 웹 문서의 hello 요소 Id를 가져와서 내부 HTML을 '안녕'으로 변경
+    // document.getElementById('???').???(변경할 것) = '???';
+    document.getElementById("hi").innerHTML = "하이하이"
+    document.getElementById("hi").style.fontSize = "30px"
+    document.getElementById("hi").style.color = "red"
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <h4 id="test" class="test1">안녕하세요</h4>
+  <h2 id="train">하이</h2>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+
+  <script>
+    $('#test').html('안녕');
+    $('#test').css('color', 'red');
+    // $('#test').attr('src', 'ddd');  // 원하는 속성 바꿀 수 있음
+    $('#train').addClass('yellow-bg')
+  </script>
+
+</body>
+</html>

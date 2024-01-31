@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="alert-box" id="alert">
+    <p id="title">Alert 박스</p>
+    <button id = "close"> X </button>
+  </div>
+
+  <button onclick="openButton('아이디를 입력하세요')">버튼1</button>
+  <button onclick="openButton('비밀번호를 입력하세요')">버튼2</button>
+
+  <script>
+
+function openButton(write){
+      document.getElementById('title').innerHTML = write;
+      document.getElementById('alert').style.display = 'block';
+    }
+
+    document.getElementById('close').addEventListener('click', function(){
+      // close 요소가 클릭이 되면 해당 코드를 실행
+      document.getElementById('alert').style.display = 'none';
+    });
+
+  </script>
+</body>
+</html>

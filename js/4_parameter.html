@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <div class="alert-box" id="alert">
+    <p id = "title"></p>
+    <button onclick="closeAlert()">닫기</button>
+  </div>
+  <button onclick="openButton('아이디를 입력하세요')">버튼1</button> 
+  <button onclick="openButton('비빌번호를 입력하세요')">버튼2</button>
+  
+<!-- JS로 조작하고 싶은 것은 조작할 html 아래에 작성 -->
+  <script>
+
+    function openButton(write){
+      document.getElementById('title').innerHTML = write;
+      document.getElementById('alert').style.display = 'block';
+      // document.getElementsByClassName('alert-box')[0].innerHTML // 해당하는 class 명을 가짅 요소를 전부 찾아서 [n] n번째꺼를 선택
+    }
+
+    function closeAlert(){
+      document.getElementById('alert').style.display='none';
+    }
+
+
+
+
+  </script>
+
+
+</body>
+</html>
