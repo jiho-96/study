@@ -1,9 +1,11 @@
 package kr.co.spring;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.io.FileNotFoundException;
 
@@ -13,6 +15,7 @@ public class ExceptionController {
 
     // 해당 컨트롤러 내부에 오류가 발생하면 해당 메서드가 받아서 처리
     @ExceptionHandler(Exception.class)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR) // 200 -> 500
     public String catcher(Exception ex, Model model){
         System.out.println("catcher() in ExceptionController");
         System.out.println("model="+model);
@@ -22,7 +25,7 @@ public class ExceptionController {
 
     @ExceptionHandler({NullPointerException.class, FileNotFoundException.class})
     public String catcher2(Exception ex, Model model){
-        model.addAttribute("ex", ex);
+        //model.addAttribute("ex", ex);
         return "error";
     }
 
